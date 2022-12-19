@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block content %}
+<body>
+<h3> Выгрузка из AmoCRM в Гугл Таблицы </h3>
+<p> Для дальнейшего использования рекомендуется использовать фильтры.
+<form action="" method='POST' name="InfoForm">
+    {{ infoForm.csrt_token }}
+    {{ infoForm.startdate.label }} {{infoForm.startdate(class='datepicker')}} {{infoForm.hidden_tag()}}
+    {{ infoForm.enddate.label }} {{infoForm.enddate(class='datepicker')}} {{infoForm.hidden_tag()}}
+    {{ infoForm.project.label }}
+    {{ infoForm.project() }}
+    <p>
+    {{infoForm.submit()}}
+        {% if infoForm.errors %}
+        {{ infoForm.errors }}
+        {% endif %}
+    </p>
+</form>
+
+
+</body>
+{% endblock %}

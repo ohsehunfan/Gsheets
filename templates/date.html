@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+<h3>Result:</h3>
+
+<h4>Start Date is: {{session['startdate']}}</h4>
+<h4>End Date is: {{session['enddate']}}</h4>
+<h4>Selected project is: {{session['project']}}</h4>
+<br/>
+  <h4><a href="https://drive.google.com/drive/folders/1PYwneYSP9AyYNCzdNTeprSIVkd4ZSj9u">Google Drive folder</a></h4>
+  <h4><a href="https://docs.google.com/spreadsheets/d/{{session['sheet_id']}}/edit">Your spreadsheet</a></h4>
+
+</body>
+{% endblock %}
